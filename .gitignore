@@ -1,3 +1,10 @@
 node_modules/
 .env
 .env.*
+
+# DevSync Git Module
+Git/server/.env
+Git/server/.env.*
+Git/server/node_modules/
+Git/client/node_modules/
+Git/server/repositories/

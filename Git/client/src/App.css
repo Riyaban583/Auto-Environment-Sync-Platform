@@ -1,0 +1,458 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6f8fc;
+  color: #111827;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  height: 78px;
+  padding: 0 7%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.logo span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  color: #475569;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.main {
+  width: min(1100px, 90%);
+  margin: auto;
+  padding: 75px 0;
+}
+
+.hero {
+  max-width: 750px;
+  margin-bottom: 42px;
+}
+
+.tag {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin: 15px 0 20px;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.description {
+  max-width: 680px;
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.connectCard {
+  background: white;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.cardHeader h3 {
+  margin: 0 0 7px;
+  font-size: 20px;
+}
+
+.cardHeader p {
+  margin: 0;
+  color: #64748b;
+}
+
+.githubBadge {
+  background: #111827;
+  color: white;
+  padding: 8px 13px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.inputGroup input {
+  flex: 1;
+  min-width: 0;
+
+  padding: 15px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+}
+
+.inputGroup input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.inputGroup button {
+  border: 0;
+  background: #2563eb;
+  color: white;
+  padding: 0 24px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.inputGroup button:hover {
+  background: #1d4ed8;
+}
+
+.hint {
+  color: #94a3b8;
+  font-size: 12px;
+  margin: 12px 0 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.featureCard {
+  background: white;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+}
+
+.featureIcon {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.featureCard h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.featureCard p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .main {
+    padding-top: 45px;
+  }
+
+  .inputGroup {
+    flex-direction: column;
+  }
+
+  .inputGroup button {
+    padding: 15px;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .status {
+    display: none;
+  }
+}
+
+.errorMessage {
+  margin-top: 12px;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.inputGroup button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.analysisSection {
+  margin-top: 55px;
+}
+
+.analysisTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.analysisTitle h2 {
+  margin: 5px 0 0;
+  font-size: 30px;
+}
+
+.successBadge {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.metadataGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.analysisCard,
+.detailsCard {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.analysisCard {
+  padding: 22px;
+}
+
+.analysisCard span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.analysisCard h3 {
+  margin: 10px 0 4px;
+  font-size: 21px;
+}
+
+.analysisCard p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.detailsCard {
+  padding: 25px;
+}
+
+.detailsCard h3 {
+  margin: 0 0 20px;
+}
+
+.branchList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.branchItem {
+  padding: 11px;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.branchDot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #2563eb;
+  border-radius: 50%;
+  margin-right: 9px;
+}
+
+.commitItem {
+  padding: 14px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.commitItem:last-child {
+  border-bottom: 0;
+}
+
+.commitTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.commitTop strong {
+  font-size: 14px;
+}
+
+.commitTop code {
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 4px 7px;
+  border-radius: 5px;
+  height: fit-content;
+}
+
+.commitItem p {
+  color: #64748b;
+  font-size: 12px;
+  margin: 7px 0 0;
+}
+
+@media (max-width: 800px) {
+  .metadataGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .metadataGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.githubConnectBtn {
+  border: none;
+  background: #111827;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.githubConnectBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.githubUser {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f3f6fb;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.githubUser img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.githubUser div {
+  display: flex;
+  flex-direction: column;
+}
+
+.githubUser strong {
+  font-size: 13px;
+  color: #111827;
+}
+
+.githubUser span {
+  font-size: 11px;
+  color: #16a34a;
+}
